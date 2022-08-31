@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Master Plates Menu Consultants</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--need viewport info to make page responsive-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">  <!--bootstrap grid css file link-->
+    <link rel="stylesheet" type="text/css" href="custom.css">  <!--custom stylesheet to override some of the bootstrap-->
+    <!--Links for Google Font Family-for MP style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>  <!--mustache works with jquery -->
+    <script type="text/javascript" src="mustache.js"></script>  <!--reference mustache to use in our webpage -->
+    <script type="text/javascript" src="data.js"></script>  <!--separate data from the html layout in separate file -->
+    
+</head>
+
+<body class="body-styles">
+    <header>  <!--Navigation bar-modified/customized bootstrap-->
+      <nav class="navbar navbar-inverse navbar-static-top nav-styles customNav" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!--logo with home link, aria labels, tab capability-->
+            <a class="navbar-brand" href="index.html"><img class="logoimage" src="masterplateLogo.jpg" alt="Master Plates logo homepage link" tabindex="0"></a>
+          </div>
+          <!--navigation collapses to hamburger on small screens-->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+            <ul class="nav navbar-nav navbar-right colorWhite" aria-label="Navigation">
+              <li><a href="about.html" aria-label="Read more about Menu Engineering" tabindex="0">Menu Engineering</a></li>
+              <li><a href="about.html#servicesLink" aria-label="Read more about available MP services" tabindex="0">Services</a></li>
+              <li><a href="gallery.html" aria-label="See MP product photos" tabindex="0">Gallery</a></li>
+              <li><a href="contact.html" aria-label="Go to contact info page" tabindex="0">Contact</a></li>
+              <li><a href="accountLogin.html"aria-label="Login to client MP account hub" tabindex="0">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+    <div class="jumbotron backgroundImage jumboBackgroundImage">
+      <span role="img" aria-label="large screen busy restaurant image visible">  <!--aria has to be like this since the image is background img using CSS media query-->
+        <div class="container textcenter"><br><br>
+        <h1 class="mainHeader">Master Plates Menu Consultants</h1><br><br>
+        <h2 class="secondaryHeader">Menu Engineering Your Restaurant's Way To Success!</h2><br><br><br><br><br>
+        <p>
+          <a class="btn btn-primary btn-lg learnMoreButton" href="about.html" role="button" aria-pressed="false" tabindex="0" tabindex="0">Learn more »</a>
+        </p><br><br><br>
+      </span>
+      </div>
+    </div>
+
+    <div class="container missionStatement">
+      <br>
+      <h1>Mission Statement</h1>
+      <br>
+      <p>Master Plates Menu Consultants strive to help restaurants rise to the top of the business by engineering the absolute best menus.  We take all elements of
+         menu excellence into consideration, to create the tastiest, most loved, custom-tailored menu items that become the heart of your restaurant's customer experience.
+      </p>
+      <br><br><br>
+    </div>
+
+    <!--Benefits grid using Mustache.js-->
+    <div class="container benefits">
+      <h1>Key Benefits</h1><br>
+      <div class="row">
+        <div class="col-lg-4"> <!--bootstrap grid, goes to stacked with mediaum and small screens-->
+          <div class="benefitGridCell heightLI">
+            <!--mustache template-->
+            <script id="template" type="x-tmpl-mustache">   {{! script with id template, specifying how content will be added to the page  }}
+            <h2 class="textcenter">{{benefit.b1Heading}}</h2><br>
+          <ul>   {{! making rendering for the line item foods and prices }}
+              {{#b1data}}
+                  <li>{{b1LI}}</li><br>
+              {{/b1data}}   {{! must close the item tag in the script }}
+          </ul>
+      </script>
+      <div id="target" class="benefitList"></div>  <!--specifying where content will be rendered and placed into -->
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="benefitGridCell heightLI">
+            <!--mustache template-->
+           <script id="template2" type="x-tmpl-mustache">   {{! script with id template, specifying how content will be added to the page  }}
+              <h2 class="textcenter">{{benefit2.b2Heading}}</h2><br>
+            <ul>   {{! making rendering for the line item foods and prices }}
+                {{#b2data}}
+                    <li >{{b2LI}}</li><br>
+                {{/b2data}}   {{! must close the item tag in the script }}
+            </ul>
+        </script>
+        <div id="target2"></div>  <!--specifying where content will be rendered and placed into -->
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="benefitGridCell heightLI">
+            <!--mustache template-->
+           <script id="template3" type="x-tmpl-mustache">   {{! script with id template, specifying how content will be added to the page  }}
+            <h2 class="textcenter">{{benefit3.b3Heading}}</h2><br>
+          <ul>   {{! making rendering for the line item foods and prices }}
+              {{#b3data}}
+                  <li>{{b3LI}}</li><br>
+              {{/b3data}}   {{! must close the item tag in the script }}
+          </ul>
+      </script>
+      <div id="target3" class="benefitList"></div>  <!--specifying where content will be rendered and placed into -->
+          </div>
+        </div>
+    </div>
+    <div>
+      <br>
+      <h1 class="italicText">We are here for you!</h1><br>
+    </div>
+</div>
+    
+    <!--grid-12 col bootstrap layout, responsive, grid will be clickable and linked in the future, aria labeled-->
+    <div class="container gridContainer">
+      <div class="bgColorGray"><h1 class="gridContainerHeader">Are you a...</h1></div>
+      <a href="about.html#menuEngineeringLink" class="anchorGrid">
+      <div class="row gridRow">
+        <div class="col-sm-6 col-md-6 col-lg-6 gridcell" role="button" aria-pressed="false" tabindex="0"><h1>Owner</h1><p>of New or Established Restaurants</p></div>
+        <div class="col-sm-6 col-md-6 col-lg-6 gridcell" role="button" aria-pressed="false" tabindex="0"><h1>Executive Chef</h1><p><br></p></div>
+      </div>
+      <div class="row gridRow">
+        <div class="col-md-6 col-lg-6 gridcell" role="button" aria-pressed="false" tabindex="0"><h1>Restaurant Manager</h1><p><br></p></div>
+        <div class="col-md-6 col-lg-6 gridcell" role="button" aria-pressed="false" tabindex="0"><h1>Corporate Cafe</h1><p><br></p></div>
+      </div>
+      <div class="row gridRow">
+        <div class="col-lg-6 gridcell" role="button" aria-pressed="false" tabindex="0"><h1>Caterer</h1><p><br></p></div>
+        <div class="col-lg-6 gridcell" role="button" aria-pressed="false" tabindex="0"><h1>Food Industry Project Manager</h1><p>or Restaurant Consultant</p></div>
+      </div>
+      </a>
+    </div>
+
+    <div class="container gridfooter">
+      <br><br>
+      <h2>We can take your restaurant menu to the next level and beyond!</h2>
+      <br><br>
+    </div>
+    
+  <!--grid-12 col bootstrap layout, aria labeled, tab capability-->
+  <footer class="footerBackgroundImage" class="colorWhite">
+    <span role="img" aria-label="large screen busy restaurant image visible">  <!--aria has to be like this since the image is background img using CSS media query-->
+    <div class="container footercontainer">
+    <div class="row">
+      <div class="col-med-6 col-lg-3">
+        <ul role="navigation" aria-label="Navigation" class="footerNavigation">
+          <li><a href="index.html" class="colorWhite">Home</a></li>
+          <li><a href="about.html" class="colorWhite" aria-label="Read more about Menu Engineering" tabindex="0">Menu Engineering</a></li>
+          <li><a href="about.html#servicesLink" class="colorWhite" aria-label="Read more about MP services" tabindex="0">Services</a></li>
+          <li><a href="about.html#teamLink" class="colorWhite" aria-label="Read more about the MP team" tabindex="0">Our Team</a></li>
+          <li><a href="contact.html#scheduleLink" class="colorWhite" aria-label="Go to Schedule MP Consult page" tabindex="0">Schedule Consult</a></li>
+          <li><a href="gallery.html" class="colorWhite" aria-label="See MP gallery product photos" tabindex="0">Gallery</a></li>
+          <li><a href="contact.html" class="colorWhite" aria-label="Go to MP contact info page" tabindex="0">Contact</a></li>
+          <li><a href="accountLogin.html" class="colorWhite" aria-label="Login to MP client account hub" tabindex="0">Login</a></li><br>
+        </ul>
+      </div>
+      <div class="col-med-6 col-lg-9" ></div>
+      
+    </div>
+    <div class="row"></div> 
+      <div class="col-med-6 col-lg-6"></div>
+      <div class="col-med-6 col-lg-6 copyright">
+        <a href="index.html" aria-label="Go to MP Homepage" tabindex="0" class="colorWhite">Master Plates Menu Consultants</a>
+          <br>Megan Perry &copy;2022
+      </div>
+    </div>
+    </span>
+  </footer>
+
+</body>
+<!--Megan Perry-Maryville University-SWDV640-Final Project-Summer 2022-->
+</html>

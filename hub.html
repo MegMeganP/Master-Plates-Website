@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MP Hub</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--need viewport info to make page responsive-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">  <!--bootstrap grid css file link-->
+    <link rel="stylesheet" type="text/css" href="hubStyles.css">  <!--custom stylesheet to override some of the bootstrap-->
+    <!--Links for Google Font Family-for MP style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap" rel="stylesheet">
+    
+</head>
+
+<body class="body-styles">
+    <header style="background-color: rgb(47, 54, 54);">  <!--Navigation bar-modified/customized bootstrap-->
+      <nav class="navbar navbar-inverse navbar-static-top nav-styles customNav navHeight">
+        <div class="container">
+            <!--logo with home link, aria labels, tab capability-->
+            <a class="navbar-brand" href="index.html"><img class="logoimage" src="masterplateLogo.jpg" alt="Master Plates logo homepage link" tabindex="0"></a>
+            <div class="loginBar" id="loginName">
+                <div id="results"></div> <!--where the username will come in-->
+                <!--javascript code to put name on this page-->
+                <script>  
+                    const resultsList = document.getElementById('results');
+                    new URLSearchParams(window.location.search).forEach((value, name) => {
+                        if(name=="username"){
+                        resultsList.append('Hello, ',`${value}`,'!');
+                        resultsList.append(document.createElement('br'));
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hubHeader">
+        <h1 class="loginHeader">Welcome to the Hub:</h1>
+        <p>Your Master Plates Command Center</p>
+    </div>
+    <!--hub boxes, organizes/holds links to acount functionalities-->
+    <div class="container hubBoxContainer">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 boxmargin">
+            <div class="hubBox">
+                <ul>
+                    <a href="placeholder.html" class="boxItem"><li>View/Send Messages</li></a>
+                    <a href="placeholder.html" class="boxItem"><li>Get Project Progress Reports</li></a>
+                    <a href="placeholder.html" class="boxItem"><li>Approve Items</li></a>
+                    <a href="placeholder.html" class="boxItem"><li>Sign Documents</li></a>
+                </ul>
+            </div>
+            </div>
+            <div class="col-md-6 col-lg-6 boxmargin">
+            <div class="hubBox">
+                <ul>
+                    <a href="placeholder.html" class="boxItem"><li>Pay Invoice</li></a>
+                    <a href="placeholder.html" class="boxItem"><li>Account History</li></a>                    
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 boxmargin">
+            <div class="hubBox">
+                <ul>
+                    <a href="placeholder.html" class="boxItem"><li>View Contracts</li></a>
+                    <a href="placeholder.html" class="boxItem"><li>Manage Services</li></a>
+                </ul>
+            </div>
+            </div>
+            <div class="col-md-6 col-lg-6 boxmargin">
+            <div class="hubBox">
+                <ul>
+                    <a href="placeholder.html" class="boxItem"><li>Your MP Portfolio</li></a>
+                    <a href="placeholder.html" class="boxItem"><li>View Food Photos</li></a>                    
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2 col-md-3 col-lg-4"></div>
+        <div class="col-sm-8 col-md-6 col-lg-4 buttonDiv">
+    <a href="index.html"><button type="button" class="contactButton logoutButn">Logout</button></a>
+    <div class="col-sm-2 col-md-3 col-lg-4"></div>
+    </div>
+    </div>
+
+    <div class="hubMessage"><br><br><br>Questions? Feel free to call us at 555-555-5555 anytime!<br>Thank you for bringing Master Plates Menu Consultants to your table!</div>
+        
+
+  <!--grid-12 col bootstrap layout, aria labeled, tab capability-->
+  <footer class="gridfooter">
+    <div class="container footercontainer">
+    <div class="row">
+      <div class="col-lg-3">
+        <ul role="navigation" aria-label="Navigation" class="footerNavigation">
+          <li><a href="index.html" class="textdarkGray footerNav">Home</a></li>
+          <li><a href="contact.html" class="textdarkGray footerNav" aria-label="Go to MP contact info page" tabindex="0">Contact</a></li>
+          <li><a href="accountLogin.html" class="textdarkGray footerNav" aria-label="Login to MP client account hub" tabindex="0">Login</a></li><br>
+          <li><a href="index.html" aria-label="Go to MP Homepage" tabindex="0" class="textdarkGray mpFooter" >Master Plates Menu Consultants</a></li>
+          <li><div class="copyright textdarkGray">Megan Perry &copy;2022</div></li>
+        </ul>
+      </div>
+      <div class="col-lg-9" ></div>
+    </div>
+    </div>
+  </footer>
+</body>
+<!--Megan Perry-Maryville University-SWDV640-Final Project-Summer 2022-->
+</html>

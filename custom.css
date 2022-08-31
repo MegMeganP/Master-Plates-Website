@@ -1,0 +1,430 @@
+/*Megan Perry-Maryville University-SWDV640-Final Project Summer 2022
+css styles for index, about, contact, gallery pages*/
+/*classes are reused throughout, so sometimes the class names might be weird for where they are*/
+
+.body-styles{
+    background-color: rgb(47, 54, 54); 
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+.nav-styles{
+    padding-top: 20px; 
+    background-color: rgb(47, 54, 54); 
+    border:none; 
+    color:rgb(240, 253, 255);
+}
+
+.navHeight{  /*adjusts height of nav bar in non-index pages*/
+    height: 90px;
+}
+
+.customNav {
+    padding-top: 20px; 
+    background-color: rgb(47, 54, 54); 
+    border:none; 
+    color:rgb(240, 253, 255);
+}
+.logoimage {
+    width:40%;
+    margin-top: -30px; 
+    border-radius: 50%;
+}
+
+/*jumbotron*/
+.jumboBackgroundImage {
+    background-color:rgb(240, 253, 255);
+}
+
+.textcenter{
+    text-align: center;  
+}
+
+.mainHeader{
+    font-weight: bold; 
+    font-size: 65px;
+}
+
+.secondaryHeader{
+    font-style: italic; 
+    font-size: 30px; 
+    font-weight: bold;
+}
+
+.learnMoreButton{
+    background-color: rgb(50, 105, 116); 
+    border-color: rgb(30, 75, 84);
+    padding: 10px; 
+    padding-left:75px; 
+    padding-right:75px; 
+    border-radius:0; 
+    color: rgb(240, 253, 255); 
+    font-size: 20px;
+}
+
+.learnMoreButton:hover{
+    cursor: pointer;
+    background-color: rgb(160, 182, 187);
+    border-color: rgb(50, 105, 116);
+}
+
+/*mission*/
+.missionStatement{
+    text-align: center; 
+    color:rgb(240, 253, 255);
+    font-size: 16px;;
+}
+
+/*benefits*/
+.benefits{
+    text-align: center;
+    color: rgb(240, 253, 255);
+
+}
+
+.benefitGridCell{
+    padding:5px;
+    text-align: left;
+    background-color: rgb(240, 253, 255);
+    color:rgb(50, 105, 116);
+    height:300px;
+}
+
+.italicText{
+    font-style:italic;
+}
+
+/*lg button grid*/
+.gridContainer{
+    background-color:rgb(47, 54, 54); 
+    color:rgb(47, 54, 54);
+}
+
+.bgColorGray{
+    background-color: rgb(47, 54, 54);
+}
+
+.gridContainerHeader{
+    text-align: center;
+    color:rgb(240, 253, 255);
+    padding:1%
+}
+
+.gridRow{
+    text-align: center;
+    background-color:rgb(240, 253, 255);
+}
+
+.gridcell{
+    border-style: outset;
+}
+.gridcell:hover{
+    background-color: rgb(160, 182, 187);
+    color: rgb(47, 54, 54)
+}
+
+.anchorGrid{
+    color:rgb(50, 105, 116);
+    background-color: rgb(240, 253, 255);
+  
+}
+.anchorGrid:hover{
+    color: rgb(47, 54, 54)
+}
+
+/*footer*/
+.gridfooter{
+    text-align: center; 
+    color:rgb(240, 253, 255);
+    background-color: rgb(47, 54, 54);
+}
+
+.colorWhite{
+    color:rgb(240, 253, 255);
+}
+
+.footercontainer{
+    padding-top:1%; 
+    padding-right:0; 
+    padding-left:0;
+}
+
+.footerNavigation{
+    list-style:none;
+    padding:0; 
+    color:rgb(240, 253, 255); 
+    font-size: 16px;
+    text-align: left;
+}
+
+.copyright{
+    margin-top: -30px; 
+    text-align:right; 
+    padding-right:0;
+    color:rgb(240, 253, 255);
+}
+
+/*media query jumbtron and footer images*/
+@media all and (min-width: 800px) {
+    .backgroundImage {
+                      background-image: url(busyRestaurantHaze.jpg); 
+                      object-fit: cover; background-repeat: round; background-position: center;background-color: rgb(47, 54, 54); color:rgb(47, 54, 54);}
+    .footerBackgroundImage{
+      background-image: url(workingKitchenCropped.jpg);color:rgb(240, 253, 255);
+
+    }
+}
+
+/*mediaquery benefits grid*/
+@media all and (max-width: 1200px) {
+    .heightLI {
+        height:fit-content;
+        }
+}
+
+
+/*Contact page extra styles*/
+.contactStyles{
+    background-color: rgb(240, 253, 255);
+    text-align: center;
+    color:rgb(47, 54, 54)
+
+}
+
+.contactHeader{
+    font-weight: bold; 
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.contactText{
+    font-size: 16px;
+    color: rgb(47, 54, 54);
+}
+
+/*contact form styles*/
+.contactFormText{
+    text-align: left;
+    width: 100%;
+    color: rgb(47, 54, 54);
+}
+
+.contactInputStyle{
+    width : 100%;
+    padding: 0;
+    margin: 0;
+    border-color: rgb(160, 182, 187);
+    border-radius:3px; 
+    padding: 5px;
+    border-style:inset;
+    border-width: 3px;
+}
+
+.contactButton{
+    background-color: rgb(50, 105, 116); 
+    border-color: rgb(160, 182, 187);
+    padding: 5px; 
+    padding-left:25px; 
+    padding-right:25px; 
+    border-radius:0; 
+    color: rgb(240, 253, 255); 
+    font-size: 16px;
+}
+
+.contactButton:hover{
+    cursor: pointer;
+    background-color: rgb(160, 182, 187);
+    border-color: rgb(160, 182, 187);
+    border-style: outset;
+}
+
+.contactInfo{
+    text-align: center;
+    font-size: 20px;
+    padding:50px;
+}
+
+/*scheduler*/
+.scheduleStyles{
+    background-color: rgb(47, 54, 54);
+    color: rgb(240, 253, 255);
+    padding: 30px;
+}
+
+.scheduleText{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.scheduleHeader{
+    font-size: 50px;
+}
+
+.scheduleFormBox{
+    margin-bottom:50px;
+}
+.scheduleFormText{
+    text-align: left;
+    width: 100%;
+    color: rgb(240, 253, 255);
+    padding: 20px;
+}
+
+.scheduleButtonRow{
+    padding-top: 50px;
+}
+
+.scheduleButton{
+    background-color: rgb(50, 105, 116); 
+    border-color: rgb(160, 182, 187);
+    padding: 5px; 
+    padding-left:25px; 
+    padding-right:25px; 
+    border-radius:0; 
+    color: rgb(240, 253, 255); 
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+}
+
+.scheduleButton:hover{
+    cursor: pointer;
+    background-color: rgb(160, 182, 187);
+    border-color: rgb(160, 182, 187);
+    border-style: outset;
+}
+
+.scheduleInfoText{
+    text-align: center;
+    font-size: 18px;
+    font-style:italic;
+    padding:20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+}
+
+/*form submit message*/
+.contactMessage{
+    color: rgb(50, 105, 116);
+    font-weight: bold;
+    font-style:italic;
+    padding: 50px;
+    font-size: 40px;
+    display:none;
+}
+
+.footerBottom{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    background-color: rgb(47, 54, 54);
+}
+
+/*About page styles*/
+
+.whatContent{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.aboutChefImg{
+    border-radius: 50%;
+    padding: 20px;
+
+}
+
+.menuBlurb{
+    text-align: justify;
+    padding: 60px;
+    font-size: 16px;
+    color: rgb(30, 75, 84);
+}
+
+
+/*services styles*/
+.serviceBox{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.serviceList{
+    list-style-type: none;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.serviceConsultBtn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.serviceBlurb{
+    padding: 20px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/*meet team styles*/
+.meetTeamBox{
+    padding-top:20px;
+    padding-bottom:20px;
+
+}
+.teamHeader{
+    font-size: 40px;
+    padding-bottom:20px;
+}
+
+.teamGridCell{
+    border-style: solid;
+    border:10px;
+    border-color: rgb(50, 105, 116);
+    padding:5px;
+}
+
+.teamPhoto{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+.gridName{
+    padding-top:5px;
+    text-align: left;
+}
+
+.containerPadding{
+    padding-bottom: 20px;
+}
+.meetbtn{
+    padding: 10px
+}
+
+.meetContact{
+    padding:20px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.textLink{
+    color: rgb(50, 105, 116);
+}
+
+/*gallery page styles*/
+.galleryheader{
+    font-size: 60px;
+}
+
+.galGrid{
+    padding: 5px;
+}
+
+.sIcons{
+    height: 50px;
+    width: 50px;
+}
+
+.likeUs{
+    text-align: center;
+    color: rgb(240, 253, 255);
+    font-size: 20px;
+    padding: 20px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Account Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--need viewport info to make page responsive-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">  <!--bootstrap grid css file link-->
+    <link rel="stylesheet" type="text/css" href="hubStyles.css">  <!--custom stylesheet to override some of the bootstrap-->
+    <!--Links for Google Font Family-for MP style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap" rel="stylesheet">
+    <script src="script.js" async></script>
+</head>
+
+<body class="body-styles" onload="showAlert()">
+    <header style="background-color: rgb(47, 54, 54);">  <!--Navigation bar-modified/customized bootstrap-->
+      <nav class="navbar navbar-inverse navbar-static-top nav-styles customNav navHeight">
+        <div class="container">
+          
+            <!--logo with home link, aria labels, tab capability-->
+            <a class="navbar-brand" href="index.html"><img class="logoimage" src="masterplateLogo.jpg" alt="Master Plates logo homepage link" tabindex="0"></a>
+            <div class="loginBar">
+                Account Login
+                </div>
+            </div>
+            
+
+        </div>
+      </nav>
+    </header>
+
+        
+    <div class="headerStyle">
+        <h1 class="loginHeader">Welcome To Your Master Plates Account</h1>
+        <br><br>
+        <p>Please login to enter your MP Hub</p>
+    </div>
+
+    <!--login form-type in your first name and any fake password to get to the hub page-->
+    <form action="hub.html" method="GET" enctype="multipart/form-data">
+    <div class="container formStyle">
+        <div class="form-group row">
+          <div class="col-sm-2 col-md-3 col-lg-4"></div>
+          <div class="col-sm-8 col-md-6 col-lg-4">
+            <div><label for="Username"></label></div>
+            <div><input type="text" name="username" id="username" required class="contactInputStyle form-control" placeholder="Username"> </div>
+          </div>
+          <div class="col-sm-2 col-md-3 col-lg-4"></div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2 col-md-3 col-lg-4"></div>
+          <div class="col-sm-8 col-md-6 col-lg-4">
+            <div><label for="email"></label></div>
+            <div><input type="password" name="password" id="password" required class="contactInputStyle form-control" placeholder="Password"></div>
+          </div>
+          <div class="col-sm-2 col-md-3 col-lg-4"></div>
+        </div>
+       
+        <div class="form-group row">
+          <div class="col-sm-2 col-md-3 col-lg-4"></div>
+          <div class="col-sm-8 col-md-6 col-lg-4 buttonDiv">
+            <a href="hub.html"><button type="submit" class="contactButton" id="contactButton">Login</button></a>
+          </div>
+          <div class="col-sm-2 col-md-3 col-lg-4"></div>
+        </div>
+      </div>
+    </form>
+
+  <!--grid-12 col bootstrap layout, aria labeled, tab capability-->
+  <footer class="gridfooter">
+    <div class="container footercontainer">
+    <div class="row">
+      <div class="col-lg-3">
+        <ul role="navigation" aria-label="Navigation" class="footerNavigation">
+          <li><a href="index.html" class="textdarkGray footerNav">Home</a></li>
+          <li><a href="contact.html" class="textdarkGray footerNav" aria-label="Go to MP contact info page" tabindex="0">Contact</a></li>
+          <li><a href="#" class="textdarkGray footerNav" aria-label="Login to MP client account hub" tabindex="0">Login</a></li><br>
+          <li><a href="index.html" aria-label="Go to MP Homepage" tabindex="0" class="textdarkGray mpFooter" >Master Plates Menu Consultants</a></li>
+          <li><div class="copyright textdarkGray">Megan Perry &copy;2022</div></li>
+        </ul>
+      </div>
+      <div class="col-lg-9" ></div>
+    </div>
+    </div>
+  </footer>
+</body>
+<!--Megan Perry-Maryville University-SWDV640-Final Project-Summer 2022-->
+</html>

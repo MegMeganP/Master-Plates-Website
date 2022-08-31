@@ -1,0 +1,216 @@
+/*Megan Perry-Maryville University-SWDV640-Final Project Summer 2022
+css styles for account login, hub and placeholder*/
+/*classes are reused throughout, so sometimes the class names might be weird for where they are*/
+
+.body-styles{
+    background-color: rgb(202, 177, 170); 
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+.nav-styles{
+    padding-top: 20px; 
+    background-color:  rgb(219,123,96); 
+    border:none; 
+    color:rgb(47, 54, 54);
+}
+
+.navHeight{  /*adjusts height of nav bar in non-index pages*/
+    height: 90px;
+}
+
+.customNav {
+    padding-top: 20px; 
+    background-color: rgb(219,123,96); 
+    border:none; 
+    color:rgb(47, 54, 54);
+}
+.logoimage {
+    width:40%;
+    margin-top: -30px; 
+    border-radius: 50%;
+}
+
+.textdarkGray{
+    
+    color:rgb(47, 54, 54);
+}
+
+/*login nav*/
+.loginBar{
+    text-align: right;
+    font-size: 27px;
+    padding-left:0;
+    padding-right:20px;
+}
+
+/*contact form styles*/
+.contactFormText{
+    text-align: left;
+    width: 100%;
+    color: rgb(47, 54, 54);
+}
+
+.contactInputStyle{
+    width : 100%;
+    padding: 0;
+    margin: 0;
+    border-color: rgb(202, 177, 170);
+    border-radius:3px; 
+    padding: 5px;
+    border-style:inset;
+    border-width: 3px;
+}
+
+.buttonDiv{
+    text-align: center;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+.contactButton{
+    background-color: rgb(160, 182, 187); 
+    border-color: rgb(160, 182, 187);
+    border-width: 2px;
+    padding: 5px; 
+    padding-left: 40px; 
+    padding-right:40px; 
+    border-radius:0; 
+    color: rgb(47, 54, 54); 
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.contactButton:hover{
+    cursor: pointer;
+    background-color: rgb(193, 206, 209);
+    border-color: rgb(160, 182, 187);
+    border-style: outset;
+}
+
+.contactInfo{
+    text-align: center;
+    font-size: 20px;
+    padding:50px;
+}
+
+/*content*/
+/*login*/
+.headerStyle{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.loginHeader{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom:30px;
+}
+/*hub*/
+.hubHeader{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    color:rgb(47, 54, 54);
+}
+
+.textItalic{
+    font-style: italic;
+}
+
+.hubBoxContainer{
+    padding-bottom:10px;
+    background-color: rgb(202, 177, 170);
+}
+
+.hubBox{
+    background-color: rgb(219,123,96);
+    padding:10px;
+    padding-top:25px;
+    font-size: 16px;
+    color: rgb(240, 253, 255);
+    height: 200px;
+}
+
+.boxItem{
+    color:rgb(240, 253, 255);
+}
+
+.boxItem:hover{
+    color:rgb(47, 54, 54)
+}
+
+.boxmargin{
+    padding:15px;
+    background-color: rgb(202, 177, 170);
+}
+
+.logoutButn{
+    width:300px
+}
+
+.hubMessage{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.return{
+    color:rgb(219,123,96);
+}
+
+/*footer*/
+.gridfooter{
+    text-align: center; 
+    color:rgb(47, 54, 54);
+    background-color: rgb(219,123,96);
+    padding-top: 30px;
+    padding-bottom:30px;
+}
+
+.colorWhite{
+    color:rgb(240, 253, 255);
+}
+
+.footercontainer{
+    padding-top:1%; 
+    padding-right:0; 
+    padding-left:0;
+}
+
+.footerNavigation{
+    list-style:none;
+    padding:0; 
+    color:rgb(240, 253, 255); 
+    font-size: 16px;
+    text-align: left;
+}
+
+/*login footer*/
+.footerNav{
+    color:rgb(47, 54, 54)
+}
+
+.footerNav:hover{
+    color:rgb(202, 177, 170)
+}
+
+.mpFooter{
+    font-size: 14px;
+}
+
+.mpFooter:hover{
+    color: rgb(202, 177, 170)
+}
+
+.copyright{
+    font-size: 14px;
+    text-align:left
+}
+
+.formStyle{ /*to move footer down*/
+    margin-bottom: 200px;
+}
